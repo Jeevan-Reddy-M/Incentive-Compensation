@@ -3,7 +3,7 @@ import os
 import random
 from datetime import datetime, timedelta
 
-customer_ids = list(range(1, 21))
+customer_ids = list(range(1, 501))
 store_ids = list(range(121, 124))
 product_data = {
     "quaker oats": 212,
@@ -21,16 +21,16 @@ sales_persons = {
     123: [7, 8, 9]
 }
 
-start_date = datetime(2023, 3, 3)
-end_date = datetime(2023, 8, 20)
+start_date = datetime(2025, 1, 1)
+end_date = datetime(2025, 4, 20)
 
-file_location = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data"
+file_location = "D:\\project"
 csv_file_path = os.path.join(file_location, "sales_data.csv")
 with open(csv_file_path, "w", newline="") as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(["customer_id", "store_id", "product_name", "sales_date", "sales_person_id", "price", "quantity", "total_cost"])
 
-    for _ in range(500):
+    for _ in range(5000000):
         customer_id = random.choice(customer_ids)
         store_id = random.choice(store_ids)
         product_name = random.choice(list(product_data.keys()))

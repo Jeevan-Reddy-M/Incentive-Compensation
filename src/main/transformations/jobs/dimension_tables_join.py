@@ -1,7 +1,7 @@
 from pyspark.sql.functions import *
 from src.main.utility.logging_config import *
 #enriching the data from different table
-def dimesions_table_join(final_df_to_process,
+def dimensions_table_join(final_df_to_process,
                          customer_table_df,store_table_df,sales_team_table_df):
 
     #step 1 where i am adding customer table

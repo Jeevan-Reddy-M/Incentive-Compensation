@@ -1,11 +1,12 @@
 import mysql.connector
+from resources.dev import config
 
 def get_mysql_connection():
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="password",
-        database="manish"
+        host=config.mysql_properties.get("host"),
+        user=config.mysql_properties.get("user"),
+        password=config.mysql_properties.get("password"),
+        database=config.database_name
     )
     return connection
 

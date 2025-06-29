@@ -21,7 +21,7 @@ sales_persons = {
     123: [7, 8, 9]
 }
 
-file_location = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data"
+file_location = "D:\\project"
 
 if not os.path.exists(file_location):
     os.makedirs(file_location)

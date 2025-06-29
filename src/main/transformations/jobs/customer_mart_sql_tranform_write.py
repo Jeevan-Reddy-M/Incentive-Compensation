@@ -19,6 +19,6 @@ def customer_mart_calculation_table_write(final_customer_data_mart_df):
                     .distinct()
 
     #Write the Data into MySQL customers_data_mart table
-    db_writer = DatabaseWriter(url=config.url,properties=config.properties)
+    db_writer = DatabaseWriter(url=config.url,properties=config.mysql_properties)
     db_writer.write_dataframe(final_customer_data_mart,config.customer_data_mart_table)
 

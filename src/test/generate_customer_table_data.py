@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 fake = Faker('en_IN')
 
-for _ in range(25):
+for _ in range(2500):
     first_name = fake.first_name()
     last_name = fake.last_name()
     address = 'Delhi'

@@ -11,6 +11,7 @@ class ParquetWriter:
                 .option("header", "true") \
                 .mode(self.mode) \
                 .option("path", file_path) \
+                .option("mapreduce.fileoutputcommitter.algorithm.version", "2") \
                 .save()
         except Exception as e:
             logger.error(f"Error writing the data : {str(e)}")

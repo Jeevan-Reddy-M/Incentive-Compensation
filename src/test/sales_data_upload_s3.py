@@ -2,10 +2,10 @@ import os
 from resources.dev import config
 from src.main.utility.s3_client_object import *
 from src.main.utility.encrypt_decrypt import *
-s3_client_provider = S3ClientProvider(decrypt(config.aws_access_key), decrypt(config.aws_secret_key))
+s3_client_provider = S3ClientProvider(config.aws_access_key, config.aws_secret_key)
 s3_client = s3_client_provider.get_client()
 
-local_file_path = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\sales_data_to_s3\\"
+local_file_path = "D:\\project\\sales_data_to_s3\\"
 def upload_to_s3(s3_directory, s3_bucket, local_file_path):
     s3_prefix = f"{s3_directory}"
     try:
@@ -19,5 +19,5 @@ def upload_to_s3(s3_directory, s3_bucket, local_file_path):
         raise e
 
 s3_directory = "sales_data/"
-s3_bucket = "youtube-project-testing"
+s3_bucket = "de-project-2025"
 upload_to_s3(s3_directory, s3_bucket, local_file_path)
