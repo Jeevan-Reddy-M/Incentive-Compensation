@@ -1,0 +1,18 @@
+# Don't commit secrets or environment files
+.env
+resources/dev/config.py
+
+# Python virtual environment
+.venv/
+
+# PyCharm settings
+.idea/
+
+# Bytecode & cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS generated
+.DS_Store
+Thumbs.db
